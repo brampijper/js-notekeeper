@@ -1,15 +1,15 @@
-import getMessage from './utils/getMessage.js';
+import addEventListeners from './utils/addEventListeners.js';
 
 class App {
     constructor() { //in the constructor you can run any function you like.
         this.render();
+        addEventListeners();
     }
 
     render() {
-        const message = getMessage();
         document.getElementById('root').append
         (`
-            ${message}
+            hello world
         `)
         }
 }
