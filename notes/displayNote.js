@@ -7,7 +7,7 @@ export default function displayNote() {
     $placeholder.style.display = hasNotes ? 'none' : 'flex';
 
     $notes.innerHTML = notes.map( note => `
-        <div style="background: ${note.color};" class="note">
+        <div style="background: ${note.color};" class="note" data-id="${note.id}">
             <div class="${note.title && 'note-title'}">${note.title}</div>
             <div class="note-text">${note.text}</div>
             <div class="toolbar-container">
