@@ -1,5 +1,6 @@
 import store from '../store.js';
 import displayNote from './displayNote.js';
+import closeForm from '../form/closeForm.js';
 
 export default function createNote({ title, text }) {
     const { notes } = store.getState();
@@ -15,4 +16,5 @@ export default function createNote({ title, text }) {
     console.log(store.getState());
     
     displayNote();
+    closeForm();
 }
