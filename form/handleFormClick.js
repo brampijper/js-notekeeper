@@ -1,4 +1,4 @@
-import { $form } from "../variables.js"
+import { $form } from "../utils/variables.js"
 import openForm from "./openForm.js";
 import closeForm from "./closeForm.js";
 

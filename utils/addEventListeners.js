@@ -1,7 +1,7 @@
 import { $noteText, $noteTitle } from './variables.js';
-import handleFormClick from './form/handleFormClick.js';
+import handleFormClick from '../form/handleFormClick.js';
 import createNote from './createNote.js';
-import closeForm from "./form/closeForm.js";
+import closeForm from "../form/closeForm.js";
 
 export default function addEventListeners () {
     document.body.addEventListener('click', event => {

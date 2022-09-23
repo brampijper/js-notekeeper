@@ -1,4 +1,4 @@
-import { $form, $noteTitle, $formButtons } from "../variables.js";
+import { $form, $noteTitle, $formButtons } from "../utils/variables.js";
 
 export default function openForm() {
     $form.classList.add('form-open');

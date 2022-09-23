@@ -1,4 +1,4 @@
-import { $form, $noteTitle, $formButtons, $noteText } from "../variables.js";
+import { $form, $noteTitle, $formButtons, $noteText } from "../utils/variables.js";
 
 export default function closeForm() {
     $form.classList.remove('form-open');
