@@ -17,5 +17,5 @@ export default function displayNote() {
                 </div>
             </div>
         </div>
-    `)
-}
+        `).join("");
+    }
