@@ -1,4 +1,4 @@
-import { $noteText, $noteTitle } from './variables.js';
+import { $noteText, $noteTitle, $formCloseButton } from './variables.js';
 import handleFormClick from '../form/handleFormClick.js';
 import createNote from '../notes/createNote.js';
 import closeForm from "../form/closeForm.js";
@@ -18,6 +18,10 @@ export default function addEventListeners () {
             createNote( { text, title } )
             closeForm();
         }
+    })
 
+    $formCloseButton.addEventListener('click', event => {
+        event.stopPropagation();
+        closeForm();
     })
 }
