@@ -13,7 +13,6 @@ export default function createNote({ title, text }) {
 
     const action = { type: "CREATE_NOTE", payload: { newNote } };
     store.dispatch(action);
-    console.log(store.getState());
     
     displayNote();
     closeForm();
