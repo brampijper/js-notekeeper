@@ -46,6 +46,11 @@ function noteReducer(state = initialState, action) {
                 note.id === Number(state.id) ? { ...note, color } : note )
             return { ...state, notes };
         }
+        case "DELETE_NOTE": {
+            const id = action.payload.id;
+            const notes = state.notes.filter( note => note.id !== Number(id) )
+            return { ...state, notes };
+        }
         default: 
             return state;
     }
