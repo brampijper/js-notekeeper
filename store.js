@@ -31,7 +31,7 @@ function noteReducer(state = initialState, action) {
             return { ...state, title, text, id } // always return something to update state. This is object shorthand for (initialState.title:title)
         }
         case "SET_NOTE_ID": {
-            const id = action.payload.noteID;
+            const id = action.payload.id;
             return { ...state, id }
         }
         case "EDIT_NOTE": {
@@ -42,10 +42,9 @@ function noteReducer(state = initialState, action) {
         }
         case "EDIT_NOTE_COLOR": {
             const color = action.payload.color;
-            console.log(state);
             const notes = state.notes.map( note => 
                 note.id === Number(state.id) ? { ...note, color } : note )
-            return { notes };
+            return { ...state, notes };
         }
         default: 
             return state;
