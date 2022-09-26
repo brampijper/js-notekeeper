@@ -1,13 +1,11 @@
 import { $colorTooltip } from "../utils/variables.js";
-import store from '../store.js';
+import { setNoteID } from '../notes/editNoteColor.js'
 
 export function openTooltip(event) {
-    console.log(event.target);
-    if(!event.target.matches('.toolbar-color')) return; //bugfix here
+    if(!event.target.matches('.toolbar-color')) return;
 
-    const noteID = event.target.dataset.id;
-    const action = { type: "SET_NOTE_ID", payload: { noteID } }
-    store.dispatch(action);
+    const id = event.target.dataset.id;
+    setNoteID(id);
 
     //explain this
     const noteCoords = event.target.getBoundingClientRect();
