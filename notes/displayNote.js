@@ -12,10 +12,12 @@ export default function displayNote() {
             <div class="note-text">${note.text}</div>
             <div class="toolbar-container">
                 <div class="toolbar">
-                    <img class="toolbar-color" src="https://icon.now.sh/palette">
+                    <img class="toolbar-color" data-id="${note.id}" src="https://icon.now.sh/palette"> 
                     <img class="toolbar-delete" src="https://icon.now.sh/delete">
                 </div>
             </div>
         </div>
         `).join("");
     }
+
+    //replace cdn icons with static icons.
