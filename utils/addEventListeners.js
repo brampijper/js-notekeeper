@@ -6,7 +6,7 @@ import selectNote from '../notes/selectNote.js';
 import closeModal from '../modal/closeModal.js';
 import openModal from '../modal/openModal.js';
 import { openTooltip, closeTooltip } from '../notes/openTooltip.js';
-import editNoteColor from '../notes/editNoteColor.js';
+import { editNoteColor } from '../notes/editNoteColor.js';
 
 export default function addEventListeners () {
     document.body.addEventListener('click', event => {
