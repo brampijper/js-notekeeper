@@ -1,6 +1,7 @@
 import store from '../store.js';
 
 export default function selectNote (event) {
+    event.stopPropagation();
     const $selectedNote = event.target.closest('.note');
     if (!$selectedNote) return;
 
