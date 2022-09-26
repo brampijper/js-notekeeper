@@ -28,15 +28,23 @@ function noteReducer(state = initialState, action) {
             const title = selectedNote.title;
             const text = selectedNote.text;
             const id = selectedNote.id; 
-            return { ...state, title, text, id, } // always return something to update state. This is object shorthand for (initialState.title:title)
+            return { ...state, title, text, id } // always return something to update state. This is object shorthand for (initialState.title:title)
+        }
+        case "SET_NOTE_ID": {
+            const id = action.payload.noteID;
+            return { ...state, id }
         }
         case "EDIT_NOTE": {
             const { title, text } = action.payload.newNote;
-            const notes = state.notes.map( (note) => {
-                note.id === Number(state.id)
-                ? { ...note, title, text }
-                : note; 
-            })
+            const notes = state.notes.map( note => 
+                note.id === Number(state.id) ? { ...note, title, text } : note )
+            return { notes };
+        }
+        case "EDIT_NOTE_COLOR": {
+            const color = action.payload.color;
+            console.log(state);
+            const notes = state.notes.map( note => 
+                note.id === Number(state.id) ? { ...note, color } : note )
             return { notes };
         }
         default: 
