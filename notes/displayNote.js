@@ -13,7 +13,7 @@ export default function displayNote() {
             <div class="toolbar-container">
                 <div class="toolbar">
                     <img class="toolbar-color" data-id="${note.id}" src="https://img.icons8.com/ios-glyphs/60/000000/paint-palette--v1.png"> 
-                    <img class="toolbar-delete" src="https://img.icons8.com/ios-glyphs/60/000000/filled-trash.png">
+                    <img class="toolbar-delete" data-id="${note.id}" src="https://img.icons8.com/ios-glyphs/60/000000/filled-trash.png">
                 </div>
             </div>
         </div>
