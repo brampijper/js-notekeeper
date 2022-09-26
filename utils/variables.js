@@ -12,9 +12,12 @@ const $modalTitle = document.querySelector('.modal-title');
 const $modalText = document.querySelector('.modal-text');
 const $modalCloseButton = document.querySelector('.modal-close-button');
 
+const $colorTooltip = document.querySelector('#color-tooltip');
+
 export { 
     $form, $formButtons, $formCloseButton, 
     $noteTitle, $noteText, $notes, 
     $modal, $modalTitle, $modalText, $modalCloseButton,
     $placeholder,
+    $colorTooltip
 };
