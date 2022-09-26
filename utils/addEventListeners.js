@@ -7,12 +7,14 @@ import closeModal from '../modal/closeModal.js';
 import openModal from '../modal/openModal.js';
 import { openTooltip, closeTooltip } from '../notes/openTooltip.js';
 import { editNoteColor } from '../notes/editNoteColor.js';
+import deleteNote from '../notes/deleteNote.js';
 
 export default function addEventListeners () {
     document.body.addEventListener('click', event => {
         handleFormClick(event);
         selectNote(event);
         openModal(event);
+        deleteNote(event);
     })
 
     document.body.addEventListener('mouseover', event => {
