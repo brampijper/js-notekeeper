@@ -1,5 +1,5 @@
 import store from '../store.js';
-import displayNote from './displayNote.js';
+import render from './displayNote.js';
 
 export default function deleteNote(event) {
     event.stopPropagation();
@@ -9,5 +9,5 @@ export default function deleteNote(event) {
     const id = event.target.dataset.id;
     const action = { type: "DELETE_NOTE", payload: { id }}
     store.dispatch(action);
-    displayNote();
+    render();
 }

@@ -1,5 +1,5 @@
 import store from '../store.js';
-import displayNote from './displayNote.js';
+import render from './displayNote.js';
 import closeForm from '../form/closeForm.js';
 
 export default function createNote({ title, text }) {
@@ -14,6 +14,6 @@ export default function createNote({ title, text }) {
     const action = { type: "CREATE_NOTE", payload: { newNote } };
     store.dispatch(action);
     
-    displayNote();
+    render();
     closeForm();
 }
