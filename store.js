@@ -10,7 +10,7 @@ function createStore(reducer) {
 }
 
 const initialState = {
-    notes: [],
+    notes: JSON.parse(localStorage.getItem('notes')) || [],
     title: '',
     text: '',
     id: ''
