@@ -1,7 +1,17 @@
 import store from '../store.js';
 import { $placeholder, $notes } from '../utils/variables.js';
 
-export default function displayNote() {
+export default function render() {
+    saveNotes();
+    displayNote();
+}
+
+function saveNotes() {
+    const { notes } = store.getState();
+    localStorage.setItem('notes', JSON.stringify(notes));
+}
+
+function displayNote() {
     const { notes } = store.getState();
     const hasNotes = notes.length > 0;
     $placeholder.style.display = hasNotes ? 'none' : 'flex';
@@ -18,4 +28,4 @@ export default function displayNote() {
             </div>
         </div>
         `).join("");
-    }
+}
