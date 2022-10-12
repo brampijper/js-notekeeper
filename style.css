@@ -257,7 +257,6 @@
   }
   
   .toolbar {
-    opacity: 0;
     flex-direction: row-reverse;
     align-items: center;
     color: rgba(0, 0, 0, 0.54);
@@ -269,8 +268,13 @@
     transition: opacity 0.218s ease-in-out, background-color 0.218s ease-in-out,
       box-shadow 0.218s ease-in-out;
   }
-  
-  .toolbar:hover {
+
+  .note > .toolbar-container {
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .note:hover > .toolbar-container {
     opacity: 1;
   }
   
